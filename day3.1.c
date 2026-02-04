@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include<stdio.h>
 
 long long missingNum(int arr[], int size) {
     long long n = size + 1;
