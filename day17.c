@@ -6,13 +6,11 @@ int* productExceptSelf(int* nums, int numsSize, int* returnSize) {
     
     int* result = (int*)malloc(numsSize * sizeof(int));
 
-    // Left product pass
     result[0] = 1;
     for(int i = 1; i < numsSize; i++) {
         result[i] = result[i-1] * nums[i-1];
     }
 
-    // Right product pass
     int right = 1;
     for(int i = numsSize - 1; i >= 0; i--) {
         result[i] *= right;
